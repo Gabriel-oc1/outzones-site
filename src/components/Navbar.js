@@ -34,7 +34,7 @@ const Navbar = () => {
           <button 
             onClick={scrollToTop}
             className="flex items-center space-x-2 text-2xl font-display font-medium hover:opacity-80 transition-opacity">
-            <img src="/images/logo.png" alt="Logo Outzones" className="h-10 w-10" />
+            <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo Outzones" className="h-10 w-10" />
             <div>
               <span className="text-white">OUT</span>
               <span className="text-accent">ZONES</span>
