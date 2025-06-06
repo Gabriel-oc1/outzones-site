@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <a href="#contact" className="btn-primary">Começar Agora</a>
+          <a href="#contact" className="btn-primary">Fale Conosco</a>
         </div>
 
         <div className="md:hidden">

@@ -332,8 +332,8 @@ const OutzonesEcosystemDiagram = () => {
       {/* Métrica de eficiência - canto superior direito */}
       <div className="absolute top-4 right-4 text-right z-20">
         <div className="bg-black/50 backdrop-blur-md rounded-lg p-3 border border-white/10">
-          <div className="text-xs text-white/70 uppercase tracking-wider">
-            ganha-ganha
+          <div className="text-xs text-white/70 uppercase tracking-wider text-center">
+            ganha-ganha<br />
             do efeito-rede V4
 
           </div>
