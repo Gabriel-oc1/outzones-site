@@ -37,14 +37,14 @@ const SolutionsSection = () => {
           {/* Card 2 - Análise Preditiva */}
           <div className="card card-hover group h-full flex flex-col">
             <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-accent size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium mb-3">Análise Preditiva</h3>
+            <h3 className="text-xl font-medium mb-3">CRM Inteligente</h3>
             <p className="text-white/70 mb-6 flex-grow">
-              Utilize dados históricos para prever tendências futuras, 
-              identificar oportunidades e antecipar desafios do mercado.
+              Nosso sistema de CRM centraliza e organiza todas as interações com leads e clientes. 
+              Com isso, você melhora o atendimento, reduz o Custo de Aquisição de Cliente e aumenta o tempo de relacionamento.
             </p>
             <a href="#contact" className="text-accent hover:text-accent-light transition-colors flex items-center">
               Saiba mais
@@ -77,14 +77,14 @@ const SolutionsSection = () => {
           {/* Card 4 - Segurança Inteligente */}
           <div className="card card-hover group h-full flex flex-col">
             <div className="w-14 h-14 rounded-lg bg-accent-light/10 flex items-center justify-center mb-6 group-hover:bg-accent-light/20 transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-accent-light size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium mb-3">Segurança Inteligente</h3>
+            <h3 className="text-xl font-medium mb-3">Gestão de Dados</h3>
             <p className="text-white/70 mb-6 flex-grow">
-              Proteja seus dados e sistemas com soluções de segurança baseadas em IA, 
-              detectando e prevenindo ameaças em tempo real.
+              A gestão de dados proprietários permite decisões mais rápidas, precisas e personalizadas. 
+              Ao conectar seus canais de atendimento, vendas e marketing, você gera inteligência de negócio e alimenta automações com base em comportamento real.
             </p>
             <a href="#contact" className="text-accent-light hover:text-accent transition-colors flex items-center">
               Saiba mais
