@@ -33,11 +33,11 @@ const Navbar = () => {
           {/* Opção 1: Usando onClick para scroll suave */}
           <button 
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-2xl font-display font-medium hover:opacity-80 transition-opacity">
-            <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo Outzones" className="h-10 w-10" />
+            className="flex items-center space-x-2 text-2xl font-display font-light transition-opacity">
+            <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo Outzones" className="h-7 w-7" />
             <div>
-              <span className="text-white">OUT</span>
-              <span className="text-accent">ZONES</span>
+              <span className="text-white">out</span>
+              <span className="text-accent ml-[2px]">zones</span>
             </div>
           </button>
         </div>
