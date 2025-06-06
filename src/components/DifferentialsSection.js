@@ -11,49 +11,56 @@ const OutzonesEcosystemDiagram = () => {
       label: 'Real Estate Digital',
       position: { x: 70, y: 15 },
       color: '#1E5BFA',
-      description: 'Inventários próprios geram audiência qualificada'
+      description: 'Inventários próprios geram audiência qualificada',
+      icon: 'M3 21h18M5 21V7l8-4v18M19 21V9l-6-2M9 9h1m0 4h1m4-4h1m0 4h1'
     },
     {
       id: 'data',
       label: 'Dados',
       position: { x: 70, y: 35 },
       color: '#B01EFF',
-      description: 'Dados proprietários reduzem CAC'
+      description: 'Dados proprietários reduzem CAC',
+      icon: 'M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2'
     },
     {
       id: 'client',
       label: 'Cliente',
       position: { x: 70, y: 55 },
       color: '#00D4FF',
-      description: 'Consumidores qualificados (-CAC +LTV)'
+      description: 'Consumidores qualificados (-CAC +LTV)',
+      icon: 'M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'
     },
     {
       id: 'martech',
       label: 'Facilitadora Martech',
       position: { x: 45, y: 70 },
       color: '#FF6B35',
-      description: 'Conta hospedada no ecossistema'
+      description: 'Conta hospedada no ecossistema',
+      icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z'
     },
     {
       id: 'community',
       label: 'Staage Get Community',
       position: { x: 20, y: 55 },
       color: '#4ECDC4',
-      description: 'Capacita agências e empresas'
+      description: 'Capacita agências e empresas',
+      icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
     },
     {
       id: 'ai',
       label: 'A.I. Agents',
       position: { x: 20, y: 35 },
       color: '#FFE66D',
-      description: 'Otimiza tarefas com dados estruturados'
+      description: 'Otimiza tarefas com dados estruturados',
+      icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
     },
     {
       id: 'agency',
       label: 'Agências',
       position: { x: 20, y: 15 },
       color: '#FF8B94',
-      description: 'Melhoram qualidade e atraem empresas'
+      description: 'Melhoram qualidade e atraem empresas',
+      icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
     }
   ];
 
@@ -63,8 +70,8 @@ const OutzonesEcosystemDiagram = () => {
     { from: 2, to: 3, strength: 0.85 },
     { from: 3, to: 4, strength: 0.7 },
     { from: 3, to: 5, strength: 0.9 },
-    { from: 5, to: 6, strength: 0.8 },
-    { from: 4, to: 6, strength: 0.75 },
+    { from: 4, to: 5, strength: 0.8 },
+    { from: 5, to: 6, strength: 0.75 },
     { from: 6, to: 0, strength: 0.6 },
   ];
 
@@ -117,11 +124,10 @@ const OutzonesEcosystemDiagram = () => {
           </linearGradient>
           
           {nodes.map((node, index) => (
-            <radialGradient key={`gradient-${index}`} id={`nodeGradient-${index}`}>
-              <stop offset="0%" stopColor={node.color} stopOpacity="0.9" />
-              <stop offset="70%" stopColor={node.color} stopOpacity="0.4" />
-              <stop offset="100%" stopColor={node.color} stopOpacity="0.1" />
-            </radialGradient>
+            <linearGradient key={`gradient-${index}`} id={`nodeGradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor={node.color} stopOpacity="0.2" />
+              <stop offset="100%" stopColor={node.color} stopOpacity="0.05" />
+            </linearGradient>
           ))}
           
           <filter id="glow">
@@ -133,41 +139,58 @@ const OutzonesEcosystemDiagram = () => {
           </filter>
         </defs>
 
-        {/* Conexões */}
-        <g className="connections">
+ <g className="connections">
           {connections.map((connection, index) => {
             const isActive = currentActive === connection.from;
+            const fromNode = nodes[connection.from];
+            const toNode = nodes[connection.to];
             return (
               <g key={`connection-${index}`}>
                 <path
                   d={getConnectionPath(connection.from, connection.to)}
                   stroke="url(#connectionGradient)"
-                  strokeWidth="0.4"
+                  strokeWidth={isActive ? "0.8" : "0.3"}
                   fill="none"
-                  opacity={isActive ? 0.7 : 0.15}
-                  className="transition-all duration-1000 ease-in-out"
-                  strokeDasharray={isActive ? "0" : "2,2"}
+                  opacity={isActive ? 0.9 : 0.2}
+                  className="transition-all duration-500 ease-in-out"
+                  strokeDasharray={isActive ? "0" : "1,2"}
                 />
                 
-                {/* Partícula animada - apenas uma por vez */}
+                {/* Partícula animada melhorada */}
                 {isActive && (
-                  <circle
-                    r="0.6"
-                    fill="#ffffff"
-                    opacity="0.8"
-                  >
-                    <animateMotion
-                      dur="3s"
-                      repeatCount="1"
-                      path={getConnectionPath(connection.from, connection.to)}
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0;0.8;0"
-                      dur="3s"
-                      repeatCount="1"
-                    />
-                  </circle>
+                  <g>
+                    <circle
+                      r="1.2"
+                      fill={fromNode.color}
+                      opacity="0.9"
+                      filter="url(#glow)"
+                    >
+                      <animateMotion
+                        dur="2s"
+                        repeatCount="indefinite"
+                        path={getConnectionPath(connection.from, connection.to)}
+                      />
+                      <animate
+                        attributeName="r"
+                        values="0.8;1.5;0.8"
+                        dur="2s"
+                        repeatCount="indefinite"
+                      />
+                    </circle>
+                    {/* Rastro da partícula */}
+                    <circle
+                      r="0.6"
+                      fill={fromNode.color}
+                      opacity="0.4"
+                    >
+                      <animateMotion
+                        dur="2s"
+                        repeatCount="indefinite"
+                        path={getConnectionPath(connection.from, connection.to)}
+                        begin="0.3s"
+                      />
+                    </circle>
+                  </g>
                 )}
               </g>
             );
@@ -179,62 +202,110 @@ const OutzonesEcosystemDiagram = () => {
           {nodes.map((node, index) => {
             const isActive = currentActive === index;
             const isHovered = hoveredNode === index;
+            const size = isActive ? 13.5 : 11.25;
+            const iconSize = isActive ? 5.625 : 4.5;
             
             return (
               <g key={`node-${index}`}>
-                {/* Pulso apenas para nó ativo */}
+                {/* Aura de pulso melhorada */}
                 {isActive && (
-                  <circle
-                    cx={node.position.x}
-                    cy={node.position.y}
-                    r="6"
-                    fill="none"
-                    stroke={node.color}
-                    strokeWidth="0.2"
-                    opacity="0.4"
-                  >
-                    <animate
-                      attributeName="r"
-                      values="3;8;3"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0.6;0.1;0.6"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
+                  <g>
+                    {/* Primeiro anel de pulso */}
+                    <rect
+                      x={node.position.x - size/2 - 4}
+                      y={node.position.y - size/2 - 4}
+                      width={size + 8}
+                      height={size + 8}
+                      rx="3"
+                      fill="none"
+                      stroke={node.color}
+                      strokeWidth="0.4"
+                      opacity="0.6"
+                    >
+                      <animate
+                        attributeName="stroke-width"
+                        values="0.4;0.8;0.4"
+                        dur="2s"
+                        repeatCount="indefinite"
+                      />
+                      <animate
+                        attributeName="opacity"
+                        values="0.6;0.2;0.6"
+                        dur="2s"
+                        repeatCount="indefinite"
+                      />
+                    </rect>
+                    
+                    {/* Segundo anel de pulso */}
+                    <rect
+                      x={node.position.x - size/2 - 8}
+                      y={node.position.y - size/2 - 8}
+                      width={size + 16}
+                      height={size + 16}
+                      rx="4"
+                      fill="none"
+                      stroke={node.color}
+                      strokeWidth="0.2"
+                      opacity="0.3"
+                    >
+                      <animate
+                        attributeName="opacity"
+                        values="0.3;0.05;0.3"
+                        dur="2s"
+                        repeatCount="indefinite"
+                        begin="0.5s"
+                      />
+                    </rect>
+                  </g>
                 )}
                 
                 {/* Área de hover invisível maior */}
-                <circle
-                  cx={node.position.x}
-                  cy={node.position.y}
-                  r="6"
+                <rect
+                  x={node.position.x - 18}
+                  y={node.position.y - 18}
+                  width="36"
+                  height="36"
                   fill="transparent"
                   className="cursor-pointer"
                   onMouseEnter={() => setHoveredNode(index)}
                   onMouseLeave={() => setHoveredNode(null)}
                 />
                 
-                {/* Nó principal */}
-                <circle
-                  cx={node.position.x}
-                  cy={node.position.y}
-                  r={isActive ? "3.5" : "2.8"}
+                {/* Quadrado principal */}
+                <rect
+                  x={node.position.x - size/2}
+                  y={node.position.y - size/2}
+                  width={size}
+                  height={size}
+                  rx="2.25"
                   fill={`url(#nodeGradient-${index})`}
                   stroke={node.color}
-                  strokeWidth={isActive ? "0.6" : "0.3"}
+                  strokeWidth={isActive ? "0.6" : "0.4"}
                   className="transition-all duration-300 ease-out pointer-events-none"
                   filter={isActive ? "url(#glow)" : "none"}
                 />
                 
+                {/* Ícone dentro do quadrado */}
+                <g 
+                  transform={`translate(${node.position.x - iconSize/1.4}, ${node.position.y - iconSize/1.4}) scale(${iconSize/16})`}
+                  className="pointer-events-none"
+                >
+                  <path
+                    d={node.icon}
+                    stroke={node.color}
+                    strokeWidth="1.5"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity={isActive || isHovered ? 1 : 0.8}
+                    className="transition-opacity duration-300"
+                  />
+                </g>
+                
                 {/* Labels dos nós */}
                 <text
                   x={node.position.x}
-                  y={node.position.y - 5.5}
+                  y={node.position.y - 9.2}
                   textAnchor="middle"
                   fontSize="2.2"
                   fill="#ffffff"
@@ -246,7 +317,7 @@ const OutzonesEcosystemDiagram = () => {
                 {node.label.split(' ').length > 1 && (
                   <text
                     x={node.position.x}
-                    y={node.position.y - 3.2}
+                    y={node.position.y - 7.2}
                     textAnchor="middle"
                     fontSize="1.8"
                     fill="#ffffff"
@@ -310,11 +381,11 @@ const OutzonesEcosystemDiagram = () => {
       <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-md rounded-lg p-4 border border-white/10 z-20">
         <div className="flex items-center gap-3">
           <div 
-            className="w-3 h-3 rounded-full flex-shrink-0"
-            style={{ backgroundColor: nodes[currentActive].color }}
+            className="w-3 h-3 rounded-sm flex-shrink-0 border"
+            style={{ backgroundColor: nodes[currentActive].color + '40', borderColor: nodes[currentActive].color }}
           >
             <div 
-              className="w-full h-full rounded-full animate-ping"
+              className="w-full h-full rounded-sm animate-ping"
               style={{ backgroundColor: nodes[currentActive].color }}
             ></div>
           </div>
@@ -335,7 +406,6 @@ const OutzonesEcosystemDiagram = () => {
           <div className="text-xs text-white/70 uppercase tracking-wider text-center">
             ganha-ganha<br />
             do efeito-rede V4
-
           </div>
         </div>
       </div>
