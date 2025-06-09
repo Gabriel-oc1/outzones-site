@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/outzones-site/static/css/main.b46fe4a4.css",
-    "main.js": "/outzones-site/static/js/main.a6ab4db3.js",
+    "main.css": "/outzones-site/static/css/main.627eec9c.css",
+    "main.js": "/outzones-site/static/js/main.fc23eb6d.js",
     "static/js/453.b800f759.chunk.js": "/outzones-site/static/js/453.b800f759.chunk.js",
     "index.html": "/outzones-site/index.html",
-    "main.b46fe4a4.css.map": "/outzones-site/static/css/main.b46fe4a4.css.map",
-    "main.a6ab4db3.js.map": "/outzones-site/static/js/main.a6ab4db3.js.map",
+    "main.627eec9c.css.map": "/outzones-site/static/css/main.627eec9c.css.map",
+    "main.fc23eb6d.js.map": "/outzones-site/static/js/main.fc23eb6d.js.map",
     "453.b800f759.chunk.js.map": "/outzones-site/static/js/453.b800f759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b46fe4a4.css",
-    "static/js/main.a6ab4db3.js"
+    "static/css/main.627eec9c.css",
+    "static/js/main.fc23eb6d.js"
   ]
 }
