@@ -1,7 +1,7 @@
-
+// HeroSection.js - Versão corrigida com padding-top adequado
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 
-// Constantes para valores mágicos
+// ... (manter todas as constantes anteriores)
 const PARALLAX_CONFIG = {
   PARTICLES_LIGHT: { factor: -0.3, transition: '0.8s' },
   PARTICLES_STRONG: { factor: -0.5, transition: '0.8s' },
@@ -29,6 +29,8 @@ const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
+  // ... (manter toda a lógica anterior de mouse e partículas)
+
   // Detectar preferência de movimento reduzido
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -55,7 +57,7 @@ const HeroSection = () => {
     
     const handleMouseMove = (e) => {
       if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => throttledMouseMove(e), 16); // ~60fps
+      timeoutId = setTimeout(() => throttledMouseMove(e), 16);
     };
     
     if (!prefersReducedMotion) {
@@ -94,7 +96,7 @@ const HeroSection = () => {
     };
   }, [mousePosition, prefersReducedMotion]);
 
-  // Memoizar partículas para evitar recriação desnecessária
+  // Memoizar partículas
   const particles = useMemo(() => {
     const blueParticles = Array.from({ length: PARTICLES_CONFIG.BLUE_COUNT }, (_, i) =>
       generateParticleProps(i, COLORS.BLUE, PARALLAX_CONFIG.PARTICLES_LIGHT.factor)
@@ -150,7 +152,11 @@ const HeroSection = () => {
   ], []);
 
   return (
-    <section id ="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a23]">
+    <section 
+      id="home" 
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a23] pt-20 md:pt-24"
+      style={{ paddingTop: 'max(5rem, env(safe-area-inset-top))' }}
+    >
       {/* Grid de fundo */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" 
@@ -161,7 +167,7 @@ const HeroSection = () => {
         />
       </div>
       
-      {/* Partículas animadas otimizadas */}
+      {/* Partículas animadas */}
       <div className="absolute inset-0 z-0">
         {particles.map((particle) => (
           <div 
@@ -173,32 +179,32 @@ const HeroSection = () => {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Conteúdo de texto */}
           <div 
-            className="space-y-8 "
+            className="space-y-6 md:space-y-8 text-center lg:text-left"
             style={getParallaxStyle(PARALLAX_CONFIG.TEXT_CONTENT)}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight text-white">
               Transforme seu Negócio com{' '}
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent font-normal">
                 IA Personalizada
               </span>
             </h1>
-            <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
+            <p className="text-base md:text-lg text-slate-300 max-w-xl leading-relaxed mx-auto lg:mx-0">
               Soluções de inteligência artificial seguras e acessíveis para pequenas e médias empresas. 
               Automatize processos, impulsione resultados e destaque-se no mercado.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a 
                 href="#solutions" 
-                className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg transition-all duration-300 hover:from-blue-600 hover:to-purple-600 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 ${!prefersReducedMotion ? 'animate-pulse' : ''}`}
+                className={`inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg transition-all duration-300 hover:from-blue-600 hover:to-purple-600 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 text-sm md:text-base ${!prefersReducedMotion ? 'animate-pulse' : ''}`}
               >
                 Conheça Nossas Soluções
               </a>
               <a 
                 href="#contact" 
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-600 text-white font-medium rounded-lg transition-all duration-300 hover:border-blue-400 hover:bg-blue-400/10 hover:scale-105"
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-slate-600 text-white font-medium rounded-lg transition-all duration-300 hover:border-blue-400 hover:bg-blue-400/10 hover:scale-105 text-sm md:text-base"
               >
                 Como podemos ajudar?
               </a>
@@ -207,26 +213,26 @@ const HeroSection = () => {
           
           {/* Elemento visual */}
           <div 
-            className="relative"
+            className="relative order-first lg:order-last"
             style={getParallaxStyle(PARALLAX_CONFIG.VISUAL_CONTENT)}
           >
-            <div className="relative w-full h-[400px] md:h-[500px]">
+            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
               {/* Glows de fundo */}
-              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-blue-500/ blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 h-48 md:h-64 rounded-full bg-blue-500/10 blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
                    style={{ animationDuration: '4s' }} />
-              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-purple-500/20 blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-48 h-32 md:h-48 rounded-full bg-purple-500/20 blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
                    style={{ animationDuration: '3s', animationDelay: '1s' }} />
               
               {/* Elemento central */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 md:w-80 h-64 md:h-80">
                 <div className="relative w-full h-full">
                   {/* Ícone central AI */}
-                  <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-xl bg-slate-800/80 border border-blue-500/50 flex items-center justify-center backdrop-blur-sm ${!prefersReducedMotion ? 'animate-pulse' : ''}`}
+                  <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-32 h-24 md:h-32 rounded-xl bg-slate-800/80 border border-blue-500/50 flex items-center justify-center backdrop-blur-sm ${!prefersReducedMotion ? 'animate-pulse' : ''}`}
                        style={{ 
                          boxShadow: '0 0 30px rgba(59, 130, 246, 0.3)',
                          animationDuration: '2s'
                        }}>
-                    <span className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                       AI
                     </span>
                   </div>
@@ -235,7 +241,7 @@ const HeroSection = () => {
                   {orbitalIcons.map((icon, index) => (
                     <div 
                       key={index}
-                      className="absolute w-16 h-16 rounded-lg bg-slate-800/60 border border-slate-600/50 flex items-center justify-center backdrop-blur-sm"
+                      className="absolute w-12 md:w-16 h-12 md:h-16 rounded-lg bg-slate-800/60 border border-slate-600/50 flex items-center justify-center backdrop-blur-sm"
                       style={{
                         ...icon.position,
                         animation: prefersReducedMotion ? 'none' : `spin 12s linear infinite`,
@@ -245,7 +251,7 @@ const HeroSection = () => {
                     >
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
-                        className={`h-8 w-8 ${icon.color} ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
+                        className={`h-6 md:h-8 w-6 md:w-8 ${icon.color} ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
                         viewBox="0 0 20 20" 
                         fill="currentColor"
                       >
@@ -273,14 +279,10 @@ const HeroSection = () => {
       </div>
       
       {/* Elementos decorativos otimizados */}
-      <div className={`absolute bottom-10 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
+      <div className={`absolute bottom-10 left-4 md:left-10 w-24 md:w-32 h-24 md:h-32 bg-blue-500/5 rounded-full blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
            style={{ animationDuration: '4s' }} />
-      <div className={`absolute top-20 right-20 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
+      <div className={`absolute top-20 right-4 md:right-20 w-32 md:w-40 h-32 md:h-40 bg-purple-500/5 rounded-full blur-3xl ${!prefersReducedMotion ? 'animate-pulse' : ''}`} 
            style={{ animationDuration: '5s', animationDelay: '1s' }} />
-      <div className={`absolute bottom-1/4 right-1/4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl ${!prefersReducedMotion ? 'animate-bounce' : ''}`} 
-           style={{ animationDuration: '7s' }} />
-      <div className={`absolute top-1/3 left-1/3 w-16 h-16 bg-purple-500/10 rounded-full blur-xl ${!prefersReducedMotion ? 'animate-bounce' : ''}`} 
-           style={{ animationDuration: '9s', animationDelay: '1s' }} />
 
       <style jsx>{`
         @keyframes floatParticle {
